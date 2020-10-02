@@ -3,18 +3,23 @@
 int main()
 {
     
-    int i,x;
+    int i=0,x;
     printf("enter fibo num:\n");
     scanf("%d",&x);
-    int num[x];
-    num[0]=0;
-    num[1]=1;
-    printf("%d\n",num[0]);
-    printf("%d\n",num[1]);
-    for(i=2;i<x;i++)
-    {
-        num[i]=num[i-2]+num[i-1];
-        printf("%d\n",num[i]);
+    printf("Fibonacci series\n");
+    for(c=1;c<=x;c++){
+        printf("%d\t",Fibonacci(i));
+        i++
     }
     return 0;
 }
+
+int Fibonacci(int n){
+    if(n==0)
+        return 0;
+    else if(n==1)
+        return 1;
+    else
+        return (Fibonacci(n-1)+Fibonacci(n-2));
+}
+    
